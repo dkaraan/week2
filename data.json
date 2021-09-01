@@ -1,0 +1,16 @@
+[
+  {
+    "sport" : "soccer",
+    "point" : "goals"
+  },
+  
+  {
+    "sport" : "basketball",
+    "point" : "baskets"
+  },
+  
+  {
+    "sport" : "baseball",
+    "point" : "homeruns"
+  }
+]

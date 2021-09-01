@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1">
+	<title>react powered app</title>
+
+  <style>
+    ul {
+      list-style-type: none;
+      margin-bottom: 5px;
+    }
+  </style>
+
+  <!-- loading jquery --> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- react CDN documentation-->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+	<!-- loading babel transpiler -->
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js">
+	</script>
+
+</head>
+
+<body>
+<div id="like_button_container"></div>
+	<div id="myApp"></div>
+
+	<!-- loading custom script that has jsx markup-->
+	<script type="text/babel">
+		"use strict"; 
+    //strict mode 
+
+    //define the react page component (will use jsx to make some react html //elements based on data it gets from json file
+    
+    function ProjectList(props){ 
+    
+    return <div>
+			<ul>
+        {
+			  //use react map() method to loop json file to build <li> items //for //each item in array. index will be the numbering
+        props.list.map(
+          (item, index) => (
+            <li key={index}>
+              The game {item.sport}, keeps score with {item.point}.
+           </li>
+            )
+          )
+        }
+			</ul>
+		</div>;
+		}
+
+  //we will use jquery to retrieve the json file and store it in an argument
+  $.getJSON("anything", function(jsonFromJquery)
+    {
+    //this code will run after json loads. we will call react render()
+    //render() will take the jsx component and the html element to render into
+
+    ReactDOM.render(
+    <ProjectList list={jsonFromJquery}/>,
+    document.getElementById("myApp")
+    );
+    }
+  );
+	</script>
+
+  <script src="like_button.js"></script>
+</body>
+
+</html>
