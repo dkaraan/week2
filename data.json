@@ -1,16 +1,19 @@
 [
   {
     "sport" : "soccer",
-    "point" : "goals"
+    "point" : "goals",
+    "site" : "https://en.wikipedia.org/wiki/Association_football"
   },
   
   {
     "sport" : "basketball",
-    "point" : "baskets"
+    "point" : "baskets",
+    "site" : "https://en.wikipedia.org/wiki/Basketball"
   },
   
   {
     "sport" : "baseball",
-    "point" : "homeruns"
+    "point" : "homeruns",
+    "site" : "https://en.wikipedia.org/wiki/Baseball"
   }
 ]

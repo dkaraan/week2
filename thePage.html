@@ -47,7 +47,7 @@
         props.list.map(
           (item, index) => (
             <li key={index}>
-              The game {item.sport}, keeps score with {item.point}.
+              The game <a href={item.site}>{item.sport}</a>, keeps score with {item.point}.
            </li>
             )
           )
